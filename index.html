@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <ul>
+    <button onclick="reset()">Reset</button>
+    <button type="button" name="startStop" onclick="startStop()">Start/Stop</button>
+    </ul>
+    <select id="selectSort" onchange="changefunc(this.value)">
+      <!--  -->
+      <option selected hidden>Choose sort type</option>
+      <option value="bogo()">Bogo Sort</option>
+      <option value="quantumBogo()">Quantum Bogo Sort !Warning!</option>
+      <option value="bubble()">Bubble Sort</option>
+      <option value="bubbleQuick()">Bubble Sort (quick view)</option>
+      <option value="cocktail()">Cocktail Sort</option>
+      <option value="cocktailQuick()">Cocktail Sort (quick view)</option>
+      <option value="comb()">Comb Sort</option>
+      <option value="combQuick()">Comb Sort (quick view)</option>
+      <option value="gnome()">Gnome Sort</option>
+      <option value="heap()">Heap Sort</option>
+      <option value="insertion()">Insertion Sort</option>
+      <option value="merge()">Merge Sort</option>
+      <option value="quick()">Quick Sort</option>
+      <option value="radixLSD()">Radix Sort (LSD)</option>
+      <option value="radixMSD()">Radix Sort (MSD)</option>
+      <option value="selection()">Selection Sort</option>
+      <option value="doubleSelection()">Double Selection Sort</option>
+      <option value="shell()">Shell Sort</option>
+    </select>
+
+    <!-- <select id="displayStyle" onchange="eval(this.value + '()')"> -->
+    <select id="displayStyle" onchange="refreshDisplay()">
+      <option selected hidden>Choose display style</option>
+      <option value="lines">Lines</option>
+      <option value="dots">Points</option>
+      <option value="circles">Circles</option>
+      <option value="segments">Segments</option>
+    </select>
+
+    <br>
+    <script src="sketch.js"></script>
+    <script src="runners.js"></script>
+    <script src="sorts.js"></script>
+  </body>
+</html>
